@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-19T16:47:39.356Z</updated>
+  <updated>2021-06-20T06:21:06.909Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test博客</title>
+    <title>GitHub搜索技巧</title>
+    <link href="http://example.com/2021/06/17/GitHub%E6%89%BE%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <id>http://example.com/2021/06/17/GitHub%E6%89%BE%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</id>
+    <published>2021-06-17T15:29:28.000Z</published>
+    <updated>2021-06-20T06:21:06.909Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;怎么在GitHub上靠谱的找一些开源项目&quot;&gt;&lt;a href=&quot;#怎么在GitHub上靠谱的找一些开源项目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="方法类" scheme="http://example.com/categories/%E6%96%B9%E6%B3%95%E7%B1%BB/"/>
+    
+    
+    <category term="技巧" scheme="http://example.com/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>md学习笔记</title>
     <link href="http://example.com/2021/06/17/test%E5%8D%9A%E5%AE%A2/"/>
     <id>http://example.com/2021/06/17/test%E5%8D%9A%E5%AE%A2/</id>
     <published>2021-06-17T15:29:28.000Z</published>
-    <updated>2021-06-19T16:47:39.356Z</updated>
+    <updated>2021-06-20T06:21:36.344Z</updated>
     
     
       
@@ -39,7 +64,7 @@
     <category term="博客" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="markdown笔记" scheme="http://example.com/tags/markdown%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -48,19 +73,46 @@
     <link href="http://example.com/2021/06/17/hello-world/"/>
     <id>http://example.com/2021/06/17/hello-world/</id>
     <published>2021-06-17T15:23:47.689Z</published>
-    <updated>2021-06-17T15:23:47.690Z</updated>
+    <updated>2021-06-20T06:15:08.974Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is my very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
         
       
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>markdown笔记</title>
+    <link href="http://example.com/2021/06/10/md%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2021/06/10/md%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-06-10T09:28:38.000Z</published>
+    <updated>2021-06-20T06:24:36.126Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h1&gt;&lt;h2 id=&quot;形式二级标题&quot;&gt;&lt;a href=&quot;#形式二级标题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="方法类" scheme="http://example.com/categories/%E6%96%B9%E6%B3%95%E7%B1%BB/"/>
+    
+    
+    <category term="技巧" scheme="http://example.com/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="md" scheme="http://example.com/tags/md/"/>
     
   </entry>
   
