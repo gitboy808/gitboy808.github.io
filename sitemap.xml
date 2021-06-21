@@ -109,6 +109,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/butterfly/</loc>
+    <lastmod>2021-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/md/</loc>
     <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -116,7 +123,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/butterfly/</loc>
+    <loc>http://example.com/tags/</loc>
     <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -143,13 +150,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://example.com/tags/</loc>
-    <lastmod>2021-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
@@ -167,14 +167,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E8%B5%84%E6%BA%90/</loc>
+    <loc>http://example.com/categories/</loc>
     <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/</loc>
+    <loc>http://example.com/categories/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

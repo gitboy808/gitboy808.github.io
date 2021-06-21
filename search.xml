@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2021/06/17/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is my very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>GitHub搜索技巧</title>
     <url>/2021/06/17/GitHub%E6%89%BE%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<h2 id="怎么在GitHub上靠谱的找一些开源项目"><a href="#怎么在GitHub上靠谱的找一些开源项目" class="headerlink" title="怎么在GitHub上靠谱的找一些开源项目"></a>怎么在GitHub上靠谱的找一些开源项目</h2><ul>
@@ -37,6 +55,27 @@
       </categories>
       <tags>
         <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>butterfly配置分页</title>
+    <url>/2021/06/22/butterfly%E9%85%8D%E7%BD%AE%E5%88%86%E9%A1%B5/</url>
+    <content><![CDATA[<h2 id="配置分页"><a href="#配置分页" class="headerlink" title="配置分页"></a>配置分页</h2><p>title:【必需】页面标题<br>date:【必需】页面创建日期<br>type: 【必需】标籤、分类和友情链接三个页面需要配置<br>updated:【可选】页面更新日期<br>tags:</p>
+<ul>
+<li>…<br>categories:</li>
+<li>…<br>description:【可选】页面描述<br>keywords: 【可选】页面关键字<br>comments: 【可选】显示页面评论模块 (默认 true)<br>top_img: 【可选】页面顶部图片<br>mathjax: 【可选】显示 mathjax (当设置 mathjax 的 per_page: false 时，才需要配置，默认 false)<br>katex: 【可选】显示 katex (当设置 katex 的 per_page: false 时，才需要配置，默认 false)<br>aside: 【可选】显示侧边栏 (默认 true)<br>aplayer: 【可选】在需要的页面加载 aplayer 的 js 和 css, 请参考文章下面的音乐 配置<br>highlight_shrink: 【可选】配置代码框是否展开 (true/false)(默认为设置中 highlight_shrink 的配置)</li>
+</ul>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><p>title:【必需】页面标题<br>date:【必需】页面创建日期<br>tags:</p>
+<ul>
+<li>…<br>categories:</li>
+<li>…<br>description:【可选】页面描述<br>keywords: 【可选】页面关键字<br>top_img: 【可选】页面顶部图片</li>
+</ul>
+]]></content>
+      <categories>
+        <category>方法类</category>
+      </categories>
+      <tags>
+        <tag>butterfly</tag>
       </tags>
   </entry>
   <entry>
@@ -187,24 +226,15 @@ function test()&#123;
       </tags>
   </entry>
   <entry>
-    <title>butterfly配置分页</title>
-    <url>/2021/06/22/butterfly%E9%85%8D%E7%BD%AE%E5%88%86%E9%A1%B5/</url>
-    <content><![CDATA[<h2 id="配置分页"><a href="#配置分页" class="headerlink" title="配置分页"></a>配置分页</h2><p>title:【必需】页面标题<br>date:【必需】页面创建日期<br>type: 【必需】标籤、分类和友情链接三个页面需要配置<br>updated:【可选】页面更新日期<br>tags:</p>
-<ul>
-<li>…<br>categories:</li>
-<li>…<br>description:【可选】页面描述<br>keywords: 【可选】页面关键字<br>comments: 【可选】显示页面评论模块 (默认 true)<br>top_img: 【可选】页面顶部图片<br>mathjax: 【可选】显示 mathjax (当设置 mathjax 的 per_page: false 时，才需要配置，默认 false)<br>katex: 【可选】显示 katex (当设置 katex 的 per_page: false 时，才需要配置，默认 false)<br>aside: 【可选】显示侧边栏 (默认 true)<br>aplayer: 【可选】在需要的页面加载 aplayer 的 js 和 css, 请参考文章下面的音乐 配置<br>highlight_shrink: 【可选】配置代码框是否展开 (true/false)(默认为设置中 highlight_shrink 的配置)</li>
-</ul>
-<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><p>title:【必需】页面标题<br>date:【必需】页面创建日期<br>tags:</p>
-<ul>
-<li>…<br>categories:</li>
-<li>…<br>description:【可选】页面描述<br>keywords: 【可选】页面关键字<br>top_img: 【可选】页面顶部图片</li>
-</ul>
+    <title>模板</title>
+    <url>/2021/06/22/%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>内容</p>
 ]]></content>
       <categories>
-        <category>方法类</category>
+        <category>...</category>
       </categories>
       <tags>
-        <tag>butterfly</tag>
+        <tag>...</tag>
       </tags>
   </entry>
   <entry>
@@ -274,34 +304,5 @@ function test()&#123;
         <tag>工具</tag>
         <tag>网站推荐</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>模板</title>
-    <url>/2021/06/22/%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>...</category>
-      </categories>
-      <tags>
-        <tag>...</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/06/17/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is my very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
