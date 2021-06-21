@@ -40,42 +40,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/06/17/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is my very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>md学习笔记</title>
-    <url>/2021/06/17/test%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>内容</p>
-<hr>
-<h2 id="另一个标题"><a href="#另一个标题" class="headerlink" title="另一个标题"></a>另一个标题</h2><blockquote>
-<p>命令<br>main函数</p>
-</blockquote>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.gitboy808.github.io/">www.gitboy808.github.io</a></p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>markdown笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>markdown笔记</title>
     <url>/2021/06/10/md%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="形式二级标题"><a href="#形式二级标题" class="headerlink" title="-形式二级标题"></a>-形式二级标题</h2><h2 id="使用-号可表示1-6级标题"><a href="#使用-号可表示1-6级标题" class="headerlink" title="使用#号可表示1-6级标题"></a>使用#号可表示1-6级标题</h2><h1 id="段落格式"><a href="#段落格式" class="headerlink" title="段落格式"></a>段落格式</h1><p>段落换行是使用两个以上空格加上回车</p>
@@ -216,11 +180,128 @@ function test()&#123;
 </blockquote>
 ]]></content>
       <categories>
+        <category>技能类</category>
+      </categories>
+      <tags>
+        <tag>md</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>butterfly配置分页</title>
+    <url>/2021/06/22/butterfly%E9%85%8D%E7%BD%AE%E5%88%86%E9%A1%B5/</url>
+    <content><![CDATA[<h2 id="配置分页"><a href="#配置分页" class="headerlink" title="配置分页"></a>配置分页</h2><p>title:【必需】页面标题<br>date:【必需】页面创建日期<br>type: 【必需】标籤、分类和友情链接三个页面需要配置<br>updated:【可选】页面更新日期<br>tags:</p>
+<ul>
+<li>…<br>categories:</li>
+<li>…<br>description:【可选】页面描述<br>keywords: 【可选】页面关键字<br>comments: 【可选】显示页面评论模块 (默认 true)<br>top_img: 【可选】页面顶部图片<br>mathjax: 【可选】显示 mathjax (当设置 mathjax 的 per_page: false 时，才需要配置，默认 false)<br>katex: 【可选】显示 katex (当设置 katex 的 per_page: false 时，才需要配置，默认 false)<br>aside: 【可选】显示侧边栏 (默认 true)<br>aplayer: 【可选】在需要的页面加载 aplayer 的 js 和 css, 请参考文章下面的音乐 配置<br>highlight_shrink: 【可选】配置代码框是否展开 (true/false)(默认为设置中 highlight_shrink 的配置)</li>
+</ul>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><p>title:【必需】页面标题<br>date:【必需】页面创建日期<br>tags:</p>
+<ul>
+<li>…<br>categories:</li>
+<li>…<br>description:【可选】页面描述<br>keywords: 【可选】页面关键字<br>top_img: 【可选】页面顶部图片</li>
+</ul>
+]]></content>
+      <categories>
         <category>方法类</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
-        <tag>md</tag>
+        <tag>butterfly</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>资源</title>
+    <url>/2021/06/22/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><h3 id="idea的激活方式"><a href="#idea的激活方式" class="headerlink" title="idea的激活方式"></a>idea的激活方式</h3><p>需要环境： idea</p>
+<hr>
+<p>1.获取激活码打开 <a href="http://vrg123.com/">网址</a>（需要关注公众号获取）<br>2.复制激活码，打开idea：help -&gt; Register… -&gt; add new…<br>3.恭喜你永久免费了</p>
+<h2 id="网站推荐"><a href="#网站推荐" class="headerlink" title="网站推荐"></a>网站推荐</h2><h3 id="照片"><a href="#照片" class="headerlink" title="照片"></a>照片</h3><ul>
+<li><a href="https://pixabay.com/zh/">pixabay</a></li>
+<li><a href="https://unsplash.com/">Unsplash</a></li>
+<li><a href="https://www.pexels.com/zh-cn/">Pexels</a></li>
+<li><a href="https://www.foodiesfeed.com/">Foodiesfeed </a></li>
+<li><a href="https://cc0.cn/">CC零图片网</a></li>
+<li><a href="https://www.logosc.cn/so/">Logo神器</a></li>
+</ul>
+<h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><ul>
+<li><a href="https://www.iconfont.cn/">iconfont</a></li>
+<li><a href="https://iconstore.co/">iconstore</a></li>
+<li><a href="https://undraw.co/illustrations">unDraw</a></li>
+<li><a href="https://www.iconfinder.com/">ICONFINDER</a></li>
+<li><a href="https://icons8.com/">ICONS8</a></li>
+</ul>
+<h3 id="矢量图、免抠PNG、PSD模板"><a href="#矢量图、免抠PNG、PSD模板" class="headerlink" title="矢量图、免抠PNG、PSD模板"></a>矢量图、免抠PNG、PSD模板</h3><ul>
+<li><a href="https://www.freepik.com/">freepik</a></li>
+<li><a href="https://free-psd-templates.com/">free-PSD-templates</a></li>
+<li><a href="https://365psd.com/">365psd</a></li>
+<li><a href="http://pngimg.com/">pngimage</a></li>
+<li><a href="https://www.cleanpng.com/">CLEANPNG</a></li>
+</ul>
+<h3 id="壁纸"><a href="#壁纸" class="headerlink" title="壁纸"></a>壁纸</h3><ul>
+<li><a href="https://wallhaven.cc/">wallhaven</a></li>
+<li><a href="https://wall.alphacoders.com/">Wallpaper Abyss</a></li>
+<li><a href="https://bz.zzzmh.cn/">极简壁纸</a></li>
+</ul>
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><ul>
+<li><a href="https://www.videezy.com/">Videezy </a></li>
+<li><a href="https://www.videvo.net/">Videvo</a></li>
+<li><a href="https://mixkit.co/">mixkit</a></li>
+<li><a href="https://wedistill.io/">distill</a></li>
+</ul>
+<h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><ul>
+<li><a href="https://audionautix.com/">audionautix </a></li>
+<li><a href="https://freepd.com/">Freepd</a></li>
+<li><a href="https://freesound.org/">Freesound</a></li>
+<li><a href="https://www.ear0.com/">耳聆网</a></li>
+<li><a href="https://www.tosound.com/">淘声网</a></li>
+</ul>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><ul>
+<li><a href="https://www.hellofont.cn/">字由</a></li>
+<li><a href="https://www.100font.com/">100font</a></li>
+</ul>
+<h3 id="PPT模板"><a href="#PPT模板" class="headerlink" title="PPT模板"></a>PPT模板</h3><ul>
+<li><a href="http://www.officeplus.cn/Template/Home.shtml">OfficePLUS</a></li>
+<li><a href="http://ppt.sotary.com/web/wxapp/index.html">PPT超级市场</a></li>
+<li><a href="http://www.51pptmoban.com/ppt/">51PPT模板</a></li>
+<li><a href="https://www.ppthui.com/">PPT汇</a></li>
+<li><a href="http://www.ypppt.com/">优品PPT</a></li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>1.二次元整合网站 <a href="https://moe321.com/">二次元</a><br>2.可攻可受的发送接收？ <a href="https://airportal.cn/">攻受</a><br>3.P站 <a href="https://pixivic.com/">P站</a><br>4.万能音乐下载<a href="http://www.guqiankun.com/">GO</a><br>5.<a href="https://www.mvcat.com/">电影推荐</a><br>6.<a href="https://www.secaibi.com/tools/">图片压缩小工具</a><br>7.全球网络工具程度<a href="https://cybermap.kaspersky.com/">装逼</a></p>
+]]></content>
+      <categories>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>激活</tag>
+        <tag>工具</tag>
+        <tag>网站推荐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>模板</title>
+    <url>/2021/06/22/%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>...</category>
+      </categories>
+      <tags>
+        <tag>...</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/06/17/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is my very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>

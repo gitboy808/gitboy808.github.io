@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-20T06:21:06.909Z</updated>
+  <updated>2021-06-21T16:13:03.834Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>butterfly配置分页</title>
+    <link href="http://example.com/2021/06/22/butterfly%E9%85%8D%E7%BD%AE%E5%88%86%E9%A1%B5/"/>
+    <id>http://example.com/2021/06/22/butterfly%E9%85%8D%E7%BD%AE%E5%88%86%E9%A1%B5/</id>
+    <published>2021-06-22T15:25:24.000Z</published>
+    <updated>2021-06-21T16:13:03.834Z</updated>
+    
+    
+    <summary type="html">分页配置</summary>
+    
+    
+    
+    <category term="方法类" scheme="http://example.com/categories/%E6%96%B9%E6%B3%95%E7%B1%BB/"/>
+    
+    
+    <category term="butterfly" scheme="http://example.com/tags/butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>资源</title>
+    <link href="http://example.com/2021/06/22/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    <id>http://example.com/2021/06/22/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/</id>
+    <published>2021-06-21T16:28:36.456Z</published>
+    <updated>2021-06-21T17:21:29.331Z</updated>
+    
+    
+    <summary type="html">好用的免费资源</summary>
+    
+    
+    
+    <category term="资源" scheme="http://example.com/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+    <category term="激活" scheme="http://example.com/tags/%E6%BF%80%E6%B4%BB/"/>
+    
+    <category term="工具" scheme="http://example.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="网站推荐" scheme="http://example.com/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>模板</title>
+    <link href="http://example.com/2021/06/22/%E6%A8%A1%E6%9D%BF/"/>
+    <id>http://example.com/2021/06/22/%E6%A8%A1%E6%9D%BF/</id>
+    <published>2021-06-21T16:13:52.914Z</published>
+    <updated>2021-06-21T17:28:52.478Z</updated>
+    
+    
+    
+    
+    <category term="..." scheme="http://example.com/categories/"/>
+    
+    
+    <category term="..." scheme="http://example.com/tags/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub搜索技巧</title>
@@ -38,33 +97,6 @@
     
     
     <category term="技巧" scheme="http://example.com/tags/%E6%8A%80%E5%B7%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>md学习笔记</title>
-    <link href="http://example.com/2021/06/17/test%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://example.com/2021/06/17/test%E5%8D%9A%E5%AE%A2/</id>
-    <published>2021-06-17T15:29:28.000Z</published>
-    <updated>2021-06-20T06:21:36.344Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerlink&quot; title=&quot;二级标题&quot;&gt;&lt;/a&gt;二级标题&lt;/h2&gt;&lt;p&gt;内容&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;另一个标题&quot;&gt;&lt;a href=&quot;#另一个标题&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="博客" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="markdown笔记" scheme="http://example.com/tags/markdown%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -94,7 +126,7 @@
     <link href="http://example.com/2021/06/10/md%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2021/06/10/md%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2021-06-10T09:28:38.000Z</published>
-    <updated>2021-06-20T06:24:36.126Z</updated>
+    <updated>2021-06-21T15:35:15.500Z</updated>
     
     
       
@@ -107,10 +139,8 @@
     
     
     
-    <category term="方法类" scheme="http://example.com/categories/%E6%96%B9%E6%B3%95%E7%B1%BB/"/>
+    <category term="技能类" scheme="http://example.com/categories/%E6%8A%80%E8%83%BD%E7%B1%BB/"/>
     
-    
-    <category term="技巧" scheme="http://example.com/tags/%E6%8A%80%E5%B7%A7/"/>
     
     <category term="md" scheme="http://example.com/tags/md/"/>
     
