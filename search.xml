@@ -22,6 +22,195 @@
       </tags>
   </entry>
   <entry>
+    <title>git指南</title>
+    <url>/2021/06/22/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="wind上安装"><a href="#wind上安装" class="headerlink" title="wind上安装"></a>wind上安装</h3><p>在windows上使用Git，可以哦那个从<a href="https://pc.qq.com/">腾讯软件中心</a> 搜索git下载安装即可。<br>安装完成后，在开始菜单里找到“Git”-&gt;“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功！<br>安装完成后，还需要最后一步设置，在命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>注意: git config命令的–global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</p>
+<h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p>创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：</p>
+<p>第二步，通过<code>git init</code>命令把这个目录变成Git可以管理的仓库：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p>瞬间Git就把仓库建好了，而且告诉你是一个空的仓库（empty Git repository），细心的读者可以发现当前目录下多了一个.git的目录，这个目录是Git来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了。</p>
+<hr>
+<p>现在我们编写一个<code>readme.txt</code>文件，内容如下：</p>
+<pre><code>Git is a version control system.
+Git is free software.
+</code></pre>
+<p>把一个文件放到GIt仓库只需要两步：</p>
+<p>第一步，用命令<code>git add</code>告诉Git，把文件添加到仓库：</p>
+<pre><code>git add readme.txt
+</code></pre>
+<p>执行上面的命令，没有任何显示，这就对了，Unix的哲学是“没有消息就是好消息”，说明添加成功。</p>
+<p>第二步，用命令<code>git commit</code>告诉Git，把文件提交到仓库：</p>
+<pre><code>git commit -m &quot;wrote a readme file&quot;
+</code></pre>
+<p>简单解释一下git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。</p>
+<h2 id="时光机穿梭"><a href="#时光机穿梭" class="headerlink" title="时光机穿梭"></a>时光机穿梭</h2><h3 id="文件相关"><a href="#文件相关" class="headerlink" title="文件相关"></a>文件相关</h3><p>我们已经成功地添加并提交了一个readme.txt文件，现在，是时候继续工作了，于是，我们继续修改readme.txt文件，改成如下内容：</p>
+<pre><code>Git is a distributed version control system.
+Git is free software.
+</code></pre>
+<p>现在，运行<code>git status</code>命令看看结果：</p>
+<pre><code>no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<p><code>git status</code>命令可以让我们时刻掌握仓库当前的状态，上面的命令输出告诉我们，<code>readme.txt</code>被修改过了，但还没有准备提交的修改。</p>
+<p>虽然Git告诉我们<code>readme.txt</code>被修改了，但如果能看看具体修改了什么内容，自然是很好的。比如你休假两周从国外回来，第一天上班时，已经记不清上次怎么修改的<code>readme.txt</code>，所以，需要用<code>git diff</code>这个命令看看：</p>
+<pre><code>git diff readme.txt 
+</code></pre>
+<p><code>git diff</code>顾名思义就是查看difference，显示的格式正是Unix通用的diff格式，可以从上面的命令输出看到，我们在第一行添加了一个<code>distributed</code>单词。</p>
+<p>知道了对<code>readme.txt</code>作了什么修改后，再把它提交到仓库就放心多了，提交修改和提交新文件是一样的两步，第一步是<code>git add</code>：</p>
+<pre><code>git add readme.txt
+</code></pre>
+<p>同样没有任何输出。在执行第二步<code>git commit</code>之前，我们再运行<code>git status</code>看看当前仓库的状态：</p>
+<pre><code>git status
+</code></pre>
+<p><code>git status</code>告诉我们，将要被提交的修改包括<code>readme.txt</code>，下一步，就可以放心地提交了：</p>
+<pre><code>git commit -m &quot;add distributed&quot;  
+
+$ git status  
+On branch master
+nothing to commit, working tree clean
+</code></pre>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><p>现在，你已经学会了修改文件，然后把修改提交到Git版本库，现在，再练习一次，修改readme.txt文件如下：</p>
+<pre><code>Git is a distributed version control system.
+Git is free software distributed under the GPL.
+</code></pre>
+<p>然后尝试提交：</p>
+<pre><code>$ git add readme.txt
+$ git commit -m &quot;append GPL&quot;
+</code></pre>
+<p>每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。一旦你把文件改乱了，或者误删了文件，还可以从最近的一个commit恢复，然后继续工作，而不是把几个月的工作成果全部丢失。</p>
+<p>当然了，在实际工作中，我们脑子里怎么可能记得一个几千行的文件每次都改了什么内容，不然要版本控制系统干什么。版本控制系统肯定有某个命令可以告诉我们历史记录，在Git中，我们用<code>git log</code>命令查看：</p>
+<pre><code>git log  
+</code></pre>
+<p>如果嫌输出信息太多，看得眼花缭乱的，可以试试加上<code>--pretty=oneline</code>参数：</p>
+<pre><code>git log --pretty=oneline
+</code></pre>
+<p>需要友情提示的是，你看到的一大串类似<code>bc16...</code>的是<code>commit id</code>（版本号），和SVN不一样，Git的<code>commit id</code>不是1，2，3……递增的数字，而是一个SHA1计算出来的一个非常大的数字，用十六进制表示，而且你看到的<code>commit id</code>和我的肯定不一样，以你自己的为准。为什么<code>commit id</code>需要用这么一大串数字表示呢？因为Git是分布式的版本控制系统，后面我们还要研究多人在同一个版本库里工作，如果大家都用1，2，3……作为版本号，那肯定就冲突了。</p>
+<p>好了，现在我们启动时光穿梭机，准备把<code>readme.txt</code>回退到上一个版本，怎么做呢？</p>
+<p>首先，Git必须知道当前版本是哪个版本，在Git中，用<code>HEAD</code>表示当前版本，也就是最新的提交<code>bc16...</code>（注意我的提交ID和你的肯定不一样），上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code>。</p>
+<p>现在，我们要把当前版本<code>append GPL</code>回退到上一个版本add distributed，就可以使用<code>git reset</code>命令：</p>
+<pre><code>git reset --hard HEAD^
+</code></pre>
+<p>最新的那个版本已经看不到了！好比你从21世纪坐时光穿梭机来到了19世纪，想再回去已经回不去了，肿么办？</p>
+<p>办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个版本的<code>commit id</code>是<code>bc16e9e...</code>，于是就可以指定回到未来的某个版本：</p>
+<pre><code>git reset --hard bc16e9e
+</code></pre>
+<p>你回退到了某个版本，关掉了电脑，第二天早上就后悔了，想恢复到新版本怎么办？找不到新版本的commit id怎么办？</p>
+<p>在Git中，总是有后悔药可以吃的。当你用$ git reset –hard HEAD^回退到add distributed版本时，再想恢复到append GPL，就必须找到append GPL的commit id。Git提供了一个命令git reflog用来记录你的每一次命令：</p>
+<pre><code>git reflog
+</code></pre>
+<p><strong>总结一下</strong></p>
+<p><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id</code>。</p>
+<p>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</p>
+<p>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</p>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><p>案例一、在你准备提交前可以很容易地纠正它。你可以删掉最后一行，手动把文件恢复到上一个版本的状态。如果用git status查看一下：</p>
+<pre><code>git status
+</code></pre>
+<p>你可以发现，Git会告诉你，<code>git checkout -- file</code>可以丢弃工作区的修改：</p>
+<pre><code>git checkout -- readme.txt
+</code></pre>
+<p>命令<code>git checkout -- readme.txt</code>意思就是，把<code>readme.txt</code>文件在工作区的修改全部撤销，这里有两种情况：</p>
+<p>一种是<code>readme.txt</code>自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</p>
+<p>一种是<code>readme.txt</code>已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
+<p>总之，就是让这个文件回到最近一次<code>git commit</code>或<code>git add</code>时的状态。</p>
+<p>案例二、假设<code>git add</code>到暂存区了：</p>
+<p>庆幸的是，在commit之前，你发现了这个问题。用<code>git status</code>查看一下，修改只是添加到了暂存区，还没有提交：</p>
+<p>Git同样告诉我们用命令<code>git reset HEAD &lt;file&gt;</code>可以把暂存区的修改撤销掉（unstage），重新放回工作区：</p>
+<pre><code>git reset HEAD readme.txt
+</code></pre>
+<p><code>git reset</code>命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用<code>HEAD</code>时，表示最新的版本。<br>再用git status查看一下，现在暂存区是干净的，工作区有修改：</p>
+<pre><code>git status
+</code></pre>
+<p>还记得如何丢弃工作区的修改吗？</p>
+<pre><code>git checkout -- readme.txt
+</code></pre>
+<p>案例三、假设你不但改错了东西，还从暂存区提交到了版本库，怎么办呢？还记得<code>版本回退</code>一节吗？可以回退到上一个版本。不过，这是有条件的，就是你还没有把自己的本地版本库推送到远程。还记得Git是分布式版本控制系统吗？我们后面会讲到远程版本库，一旦你把<code>提交</code>推送到远程版本库，你就真的惨了……</p>
+<p><strong>小结时间</strong></p>
+<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<code>版本回退</code>一节，不过前提是没有推送到远程库。</p>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p>在Git中，删除也是一个修改操作，我们实战一下，先添加一个新文件<code>test.txt</code>到Git并且提交：</p>
+<pre><code>git add test.txt
+</code></pre>
+<p>一般情况下，你通常直接在文件管理器中把没用的文件删了，或者用<code>rm</code>命令删了：</p>
+<pre><code>rm test.txt
+</code></pre>
+<p>这个时候，Git知道你删除了文件，因此，工作区和版本库就不一致了，<code>git status</code>命令会立刻告诉你哪些文件被删除了：</p>
+<pre><code>git status
+</code></pre>
+<p>现在你有两个选择，一是确实要从版本库中删除该文件，那就用命令<code>git rm</code>删掉，并且<code>git commit</code>：</p>
+<pre><code>git rm test.txt  
+rm test.txt  
+
+git commit -m &quot;remove test.txt&quot;  
+</code></pre>
+<p>另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：</p>
+<pre><code>git checkout -- test.txt
+</code></pre>
+<p><code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>在继续阅读后续内容前，请自行注册GitHub账号。由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：</p>
+<p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
+<pre><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
+</code></pre>
+<p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。</p>
+<p>如果一切顺利的话，可以在用户主目录里找到<code>.ssh</code>目录，里面有<code>id_rsa</code>和<code>id_rsa.pub</code>两个文件，这两个就是<code>SSH Key</code>的秘钥对，<code>id_rsa</code>是私钥，不能泄露出去，<code>id_rsa.pub</code>是公钥，可以放心地告诉任何人。</p>
+<p>第2步：登陆GitHub，打开“settings”，“SSH Keys”页面：</p>
+<p>然后，点“New SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
+<h3 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h3><p>现在的情景是，你已经在本地创建了一个Git仓库后，又想在GitHub创建一个Git仓库，并且让这两个仓库进行远程同步，这样，GitHub上的仓库既可以作为备份，又可以让其他人通过该仓库来协作，真是一举多得。</p>
+<p>首先，登陆GitHub，然后，在右上角找到“New repository”按钮，创建一个新的仓库：</p>
+<p>在Repository name填入<code>learngit</code>，其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库</p>
+<p>目前，在GitHub上的这个learngit仓库还是空的，GitHub告诉我们，可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库。</p>
+<p>现在，我们根据GitHub的提示，在本地的learngit仓库下运行命令：</p>
+<pre><code>git remote add origin git@github.com:name/learngit.git
+</code></pre>
+<p>请千万注意，把上面的<code>name</code>替换成你自己的GitHub账户名，添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。</p>
+<p>显示所有远程仓库</p>
+<pre><code>git remote -v
+</code></pre>
+<p>下一步，就可以把本地库的所有内容推送到远程库上：</p>
+<pre><code>git push -u origin master
+</code></pre>
+<p>把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。</p>
+<p>由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+<p>推送成功后，可以立刻在GitHub页面中看到远程库的内容已经和本地一模一样：</p>
+<p>从现在起，只要本地作了提交，就可以通过命令：</p>
+<pre><code>git push origin master
+</code></pre>
+<p>把本地<code>master</code>分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库！</p>
+<h3 id="SSH警告"><a href="#SSH警告" class="headerlink" title="SSH警告"></a>SSH警告</h3><p>当你第一次使用Git的<code>clone</code>或者<code>push</code>命令连接GitHub时，会得到一个警告：</p>
+<p>这是因为Git使用SSH连接，而SSH连接在第一次验证GitHub服务器的Key时，需要你确认GitHub的Key的指纹信息是否真的来自GitHub的服务器，输入<code>yes</code>回车即可。</p>
+<h3 id="删除远程库"><a href="#删除远程库" class="headerlink" title="删除远程库"></a>删除远程库</h3><p>如果添加的时候地址写错了，或者就是想删除远程库，可以用<code>git remote rm name</code>命令。使用前，建议先用<code>git remote -v</code>查看远程库信息：</p>
+<p>然后，根据名字删除，比如删除<code>origin</code>：</p>
+<pre><code>git remote rm origin
+</code></pre>
+<p>此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。</p>
+<p><strong>小结</strong></p>
+<p>要关联一个远程库，使用命令<code>git remote add origin git@server-name:path/repo-name.git</code>；</p>
+<p>关联一个远程库时必须给远程库指定一个名字，<code>origin</code>是默认习惯命名；</p>
+<p>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
+<h3 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h3><p>上次我们讲了先有本地库，后有远程库的时候，如何关联远程库。</p>
+<p>现在，假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆。</p>
+<p>首先，登陆GitHub，创建一个新的仓库，名字叫<code>gitskills</code>：</p>
+<p>我们勾选<code>Add a README file</code>，这样GitHub会自动为我们创建一个<code>README.md</code>文件。创建完毕后，可以看到<code>README.md</code>文件：</p>
+<p>本机git仓库并没有和这个SSH key 关联上。用下述方法解决：</p>
+<pre><code>ssh-add &quot;你的 id-rsa 文件地址&quot;
+</code></pre>
+<p>注意这里ssh-add后面填的是私钥地址</p>
+<p>现在，远程库已经准备好了，下一步是用命令git clone克隆一个本地库：</p>
+<pre><code>git clone git@github.com:name/gitskills.git
+</code></pre>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/06/17/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is my very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
